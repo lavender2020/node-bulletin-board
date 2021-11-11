@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 sed -i "s~#{image}~$ARTIFACT_IMAGE~g" bulletin-board-deployment.json
 
 if [ -z $KUBE_TOKEN ]; then
